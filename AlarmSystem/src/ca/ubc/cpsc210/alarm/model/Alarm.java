@@ -10,14 +10,14 @@ public class Alarm extends Observable {
 	 * Constructor creates a silent alarm.
 	 */
 	public Alarm() {
-		isSounding = false;
+		isSounding = true; // changed
 	}
 	
 	/**
 	 * Turns the alarm on.
 	 */
 	public void sound() {
-		isSounding = true;
+		isSounding = false; // changed 
 		notifyObservers();
 		EventLog.getInstance().logEvent(new Event("Alarm triggered."));
 	}
