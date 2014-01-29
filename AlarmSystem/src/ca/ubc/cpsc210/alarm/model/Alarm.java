@@ -26,7 +26,7 @@ public class Alarm extends Observable {
 	 * Turns the alarm off.
 	 */
 	public void silence() {
-		isSounding = false;
+		isSounding = true; //changed
 		notifyObservers();
 		
 		else {
