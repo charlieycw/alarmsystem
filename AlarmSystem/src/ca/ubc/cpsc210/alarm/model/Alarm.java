@@ -28,6 +28,7 @@ public class Alarm extends Observable {
 	public void silence() {
 		isSounding = false;
 		notifyObservers();
+		
 		else {
 			EventLog.getInstance().logEvent(new Event("Alarm silenced."));
 		}
@@ -38,7 +39,7 @@ public class Alarm extends Observable {
 	 * @return  true if sounding, false otherwise
 	 */
 	public boolean isSounding() {
-		return isSounding;
+		return isSounding; //change
 	}
 	
 	@Override
